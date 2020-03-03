@@ -1,13 +1,26 @@
 <?php
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'relatie';
+include("_variables.php");
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die('De verbinding kan niet worden gemaakt: '.$conn->connect_error);
+$con = new mysqli(DBHOST,DBUSER,DBPASS,DBNAME);
+
+if(!$con or mysqli_connect_errno()){
+    echo mysqli_error($con);
+}else{
+    $con->set_charset("utf8");
+    $con->query("SET lc_time_names = 'nl_NL';");
 } 
+
+include("session.php");
+
+function dd($expression){
+    echo "<pre>";
+    var_dump($expression);
+    echo "</pre>";
+    die();
+}
+
+function dbp($waarde){
+    global $con;
+    return mysqli_escape_string($con,$waarde);
+}
 ?>
