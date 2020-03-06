@@ -19,14 +19,14 @@ function setFormData(){
         echo "Password is verplicht";
     }
     // pwd_hashed in bind_param zetten nog niet gelukt 
-    $query1 = $con->prepare("INSERT INTO admin(username,password) VALUES (?,'$pwd_hashed');");
+    $query1 = $con->prepare("INSERT INTO admin(username,password) VALUES (?,?);");
     
     if ($query1 === false) {
         echo mysqli_error($con)." - ";
         exit(__LINE__);
     }
     // hashed password zit er nog niet in 
-    $query1->bind_param('s', $username);
+    $query1->bind_param('ss', $username,$pwd_hashed);
     if ($query1->execute() === false) {
         echo mysqli_error($con)." - ";
         exit(__LINE__);
