@@ -32,7 +32,7 @@ function setFormData(){
         exit(__LINE__);
     } else {
         echo "Gebruiker toegevoegd";
-        // header('location: login.php');
+        header('location: login.php');
         $query1->close();
     }
     
