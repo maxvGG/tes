@@ -23,8 +23,14 @@
             <div class="col-6">
                 <form method="post" action="register.php">
                     <div class="form-group">
-                        <label for="fname">username</label>
-                        <input type="text" name="field_firstname" id="fname"  class="form-control" placeholder="username" required />
+                        <label for="fname">naam</label>
+                        <input type="text" name="field_firstname" id="fname"  class="form-control" placeholder="voornaam" required />
+                        <input type="text" name="field_infix" id="iname"  class="form-control" placeholder="tussennaam" />
+                        <input type="text" name="field_lastname" id="lname"  class="form-control" placeholder="achternaam"  />
+                    </div>
+                    <div class="form-group">
+                        <label for="passwd">email</label>
+                        <input type="password" name="field_password" class="form-control" id="passwd" placeholder="Wachtwoord"  />
                     </div>
                     <div class="form-group">
                         <label for="passwd">Wachtwoord</label>
