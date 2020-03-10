@@ -8,7 +8,7 @@
         }
         if(isset($_POST['field_password']) && $_POST['field_password'] != ''){
             $password = dbp($_POST['field_password']);
-            
+            // // 
             $sql = "SELECT password FROM admin WHERE username = '$username'";
             $result = mysqli_query($con, $sql);
             /* Find rows in table*/
