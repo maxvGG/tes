@@ -1,6 +1,6 @@
 <?php 
 define("DBHOST", "localhost");
-define("DBNAME", "webshop");
+define("DBNAME", "school");
 define("DBUSER", "root");
 define("DBPASS", "");
 define("BASEHREF", "http://localhost//php per 3");

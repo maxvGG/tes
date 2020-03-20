@@ -1,6 +1,6 @@
 <?php
     include("../config/connect.php");
-    include("../src/register.php");
+    include("../src/register_user.php");
 
     //dd($_POST);
 
@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-6">
-                <form method="post" action="register.php">
+                <form method="post" action="register_user.php">
                     <div class="form-group">
                         <label for="fname">naam</label>
                         <input type="text" name="field_firstname" id="fname"  class="form-control" placeholder="voornaam" required />
@@ -29,8 +29,12 @@
                         <input type="text" name="field_lastname" id="lname"  class="form-control" placeholder="achternaam"  />
                     </div>
                     <div class="form-group">
-                        <label for="passwd">email</label>
-                        <input type="password" name="field_password" class="form-control" id="passwd" placeholder="Wachtwoord"  />
+                        <label for="date">birthdate</label>
+                        <input type="date" name="field_date" class="form-control" id="bday"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">email</label>
+                        <input type="email" name="field_email" class="form-control" id="email" placeholder="email"  />
                     </div>
                     <div class="form-group">
                         <label for="passwd">Wachtwoord</label>

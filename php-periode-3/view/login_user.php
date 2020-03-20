@@ -1,6 +1,6 @@
 <?php 
     include('../config/connect.php');
-    include('../src/login.php');
+    include('../src/login_user.php');
     
     if(!empty($_POST)){
         $sfd = setFormData();
@@ -25,16 +25,16 @@
         <div class="main">
             <div class="col-md-6 col-sm-12">
                 <div class="login-form">
-                   <form action="login.php" method="post">
+                   <form action="login_user.php" method="post">
                       <div class="form-group">
-                         <label>Username</label>
-                         <input type="text" class="form-control" name="field_username" placeholder="username">
+                         <label>email</label>
+                         <input type="email" class="form-control" name="field_email" placeholder="email">
                       </div>
                       <div class="form-group">
                          <label>Wachtwoord</label>
                          <input type="password" class="form-control" name="field_password" placeholder="Password">
                       </div>
-                      <button type="submit" class="btn btn-black">Login</button>
+                      <button type="submit" name="submit" class="btn btn-black">Login</button>
                       <a href="register.php" class="btn btn-secondary">Registreer</a>
                    </form>
                 </div>
